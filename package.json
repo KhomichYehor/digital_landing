@@ -1,0 +1,23 @@
+{
+  "name": "tes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:scss": "node-sass -w styles/main.scss styles/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KhomichYehor/digital_landing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KhomichYehor/digital_landing/issues"
+  },
+  "homepage": "https://github.com/KhomichYehor/digital_landing#readme",
+  "dependencies": {
+    "sass": "^1.75.0"
+  }
+}
