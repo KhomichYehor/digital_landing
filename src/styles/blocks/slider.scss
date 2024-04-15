@@ -1,0 +1,85 @@
+.slider {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  align-items: center;
+
+  &__controls {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    padding: 20px;
+
+    &__title {
+      font-size: 14px;
+
+      &-bottom {
+        font-size: 10px;
+      }
+    }
+
+    &__navigation {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .slider__btn-prev {
+        background-color: red;
+      }
+
+      .slider__btn-next {
+        background-color: blue;
+      }
+
+      .slider__count {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__images {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+
+    .slider__item {
+      flex: 0 0 100%;
+      position: relative;
+      display: none;
+
+      &:first-child{
+        display: block;
+      }
+
+      &__img {
+        width: 200px;
+        display: block;
+      }
+
+      &__btn {
+        background-color: orange;
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 5px 10px;
+      }
+
+      &__info {
+        position: absolute;
+        left: 10px;
+        bottom: 50px; /* Adjusted to not overlap with the button */
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 10px;
+        display: none; /* Initially hidden */
+        max-width: calc(100% - 20px);
+        box-sizing: border-box;
+        border-radius: 8px;
+      }
+    }
+  }
+}
