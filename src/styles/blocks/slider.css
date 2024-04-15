@@ -1,7 +1,7 @@
 .slider {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 20px;
+  padding-inline: 130px;
   align-items: center;
 }
 .slider__controls {
@@ -9,7 +9,6 @@
   flex-direction: column;
   align-items: start;
   justify-content: space-between;
-  padding: 20px;
 }
 .slider__controls__title {
   font-size: 14px;
@@ -45,14 +44,17 @@
   display: block;
 }
 .slider__images .slider__item__img {
-  width: 200px;
+  width: 550px;
+  height: 600px;
   display: block;
 }
 .slider__images .slider__item__btn {
+  width: 220px;
+  height: 70px;
   background-color: orange;
   position: absolute;
-  left: 10px;
-  bottom: 10px;
+  left: 0;
+  bottom: 0;
   color: white;
   border: none;
   cursor: pointer;

@@ -1,39 +1,85 @@
 .slider {
+  font-family: 'Font1', sans-serif;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 20px;
+  padding-inline: 130px;
   align-items: center;
+  margin-bottom: 150px;
+
+  &__count-wrapper {
+    display: flex;
+    font-weight: 400;
+    color: $grey-text;
+  }
 
   &__controls {
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: space-between;
-    padding: 20px;
 
     &__title {
-      font-size: 14px;
+      font-size: 64px;
+      font-weight: 300;
+      color: $grey-text;
+      line-height: 1;
+      margin-bottom: 90px;
 
       &-bottom {
-        font-size: 10px;
+        font-size: 64px;
+        font-weight: 700;
+        color: $grey-color;
       }
     }
 
     &__navigation {
       display: flex;
       align-items: center;
-      gap: 10px;
+      margin-bottom: 90px;
 
       .slider__btn-prev {
-        background-color: red;
+        box-sizing: border-box;
+        width: 52px;
+        height: 52px;
+        background-color: $white-color;
+        border: 2px solid $btn-border-color;
+        transition: all $hover-time;
+        margin-right: 25px;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $btn-border-color;
+          border: 2px solid $grey-color;
+        }
       }
 
       .slider__btn-next {
-        background-color: blue;
+        box-sizing: border-box;
+        width: 52px;
+        height: 52px;
+        background-color: $white-color;
+        border: 2px solid $btn-border-color;
+        transition: all $hover-time;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $btn-border-color;
+          border: 2px solid $grey-color;
+        }
+      }
+    }
+
+    .slider__count {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+
+      &-left {
+        margin-right: 25px;
       }
 
-      .slider__count {
-        font-size: 16px;
+      &-right {
+        padding-left: 25px;
       }
     }
   }
@@ -42,6 +88,7 @@
     display: flex;
     overflow: hidden;
     position: relative;
+    margin-left: 140px;
 
     .slider__item {
       flex: 0 0 100%;
@@ -53,25 +100,42 @@
       }
 
       &__img {
-        width: 200px;
+        width: 650px;
+        height: 600px;
         display: block;
       }
 
       &__btn {
-        background-color: orange;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 220px;
+        height: 70px;
+        background-color: $white-color;
         position: absolute;
-        left: 10px;
-        bottom: 10px;
-        color: white;
+        left: 0;
+        bottom: 0;
+        color: $black-color;
         border: none;
         cursor: pointer;
         padding: 5px 10px;
+        gap: 20px;
+        border: 1px solid $white-color;
+
+        transition: all $hover-time;
+
+        &:hover {
+          border: 1px solid $grey-color;
+        }
       }
 
       &__info {
         position: absolute;
+        font-weight: 400;
+        font-size: 14px;
         left: 10px;
-        bottom: 50px; /* Adjusted to not overlap with the button */
+        bottom: 80px; /* Adjusted to not overlap with the button */
         background-color: rgba(0, 0, 0, 0.7);
         color: white;
         padding: 10px;
