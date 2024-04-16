@@ -217,9 +217,22 @@
         <div class="projects__block__button">Все проекты -></div>
       </div>
 
-      <div class="contact__block">
-        
-      </div>
+      <div class="form-block">
+        <h1 class="form-block__title">Связаться с нами</h1>
+        <div class="form-block__content">
+            <form class="form-block__form" id="contactForm">
+                <input type="text" class="form-block__input" placeholder="Имя" id="name">
+                <input type="tel" class="form-block__input phone__input" placeholder="Номер телефона" id="phone" required>
+                <input type="email" class="form-block__input email__input" placeholder="E-mail" id="email" required>
+                <input type="email" class="form-block__input" placeholder="Интересующий товар/услуга" id="item">
+                <textarea class="form-block__textarea message__input" placeholder="Сообщение" id="message" required></textarea>
+                <p class="form-block__text"><span class="form-block__text-star">*</span> Отправляя заявку Вы соглашаетесь с политикой конфиденциальности</p>
+                <button type="submit" class="form-block__button">Отправить -></button>
+            </form>
+            <img src="./src/img/form/image 12.png" alt="Describe Image" class="form-block__image">
+        </div>
+    </div>
+    
     </main>
   </body>
 </html>

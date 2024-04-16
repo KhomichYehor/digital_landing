@@ -1,3 +1,5 @@
+// ---------- Menu ----------
+
 function checkWindowSize() {
   if (window.innerWidth > 480) {
     document.getElementById('navbar').style.display = 'flex';
@@ -22,10 +24,9 @@ document.getElementById('close-menu').addEventListener('click', function () {
   document.body.style.overflow = 'auto';
 });
 
+// ---------- Slider ----------
 
-// ---------- Slider ---------- 
-
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const imagesContainer = document.querySelector('.slider__images');
   const slides = imagesContainer.children;
   const totalSlides = slides.length;
@@ -37,27 +38,47 @@ document.addEventListener('DOMContentLoaded', function() {
   currentSlideElement.textContent = currentSlideIndex + 1;
 
   function updateSlide(index) {
-      Array.from(slides).forEach((slide, idx) => {
-          slide.style.display = idx === index ? 'block' : 'none';
-      });
-      currentSlideElement.textContent = index + 1;
+    Array.from(slides).forEach((slide, idx) => {
+      slide.style.display = idx === index ? 'block' : 'none';
+    });
+    currentSlideElement.textContent = index + 1;
   }
 
-  document.getElementById('prev-slide').addEventListener('click', function() {
-      currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
-      updateSlide(currentSlideIndex);
+  document.getElementById('prev-slide').addEventListener('click', function () {
+    currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
+    updateSlide(currentSlideIndex);
   });
 
-  document.getElementById('next-slide').addEventListener('click', function() {
-      currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
-      updateSlide(currentSlideIndex);
+  document.getElementById('next-slide').addEventListener('click', function () {
+    currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+    updateSlide(currentSlideIndex);
   });
 
-  Array.from(document.querySelectorAll('.slider__item__btn')).forEach(button => {
-      button.addEventListener('click', function() {
-          const detailsDiv = button.nextElementSibling;
-          const isVisible = detailsDiv.style.display === 'block';
-          detailsDiv.style.display = isVisible ? 'none' : 'block';
+  Array.from(document.querySelectorAll('.slider__item__btn')).forEach(
+    (button) => {
+      button.addEventListener('click', function () {
+        const detailsDiv = button.nextElementSibling;
+        const isVisible = detailsDiv.style.display === 'block';
+        detailsDiv.style.display = isVisible ? 'none' : 'block';
       });
-  });
+    }
+  );
 });
+
+// ---------- Form ----------
+
+document
+  .getElementById('contactForm')
+  .addEventListener('submit', function (event) {
+    event.preventDefault();
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    if (!phone || !email || !message) {
+      alert('Будь ласка, заповніть всі поля.');
+    } else {
+      console.log('Form submitted', { phone, email, message });
+      alert('Форма відправлена!');
+    }
+  });
