@@ -23,7 +23,7 @@ document.getElementById('close-menu').addEventListener('click', function () {
 });
 
 
-//Slider
+// ---------- Slider ---------- 
 
 document.addEventListener('DOMContentLoaded', function() {
   const imagesContainer = document.querySelector('.slider__images');

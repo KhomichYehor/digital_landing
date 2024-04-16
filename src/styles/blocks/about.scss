@@ -1,0 +1,92 @@
+.about__block {
+  font-family: 'Font1', sans-serif;
+  padding-inline: 130px;
+  margin-bottom: 140px;
+
+  .about__text{
+    padding-left: 30px;
+
+    &__title {
+      margin: 0;
+      font-weight: 300;
+      font-size: 64px;
+      color: $grey-text;
+      line-height: 64px;
+      padding-bottom: 20px;
+    }
+
+    &__description{
+      margin: 0;
+      font-weight: 300;
+      font-size: 16px;
+      color: $black-color;
+      line-height: 25px;
+      padding-bottom: 20px;
+    }
+
+    &__btn {
+      box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 220px;
+        height: 70px;
+        background-color: $white-color;
+        color: $black-color;
+        border: none;
+        cursor: pointer;
+        padding: 5px 10px;
+        gap: 20px;
+        border: 1px solid $white-color;
+
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 12px;
+        letter-spacing: 2px;
+
+        transition: all $hover-time;
+
+        &:hover {
+          border: 1px solid $grey-color;
+        }
+    }
+  }
+}
+
+.about {
+    background: $about-block-bg-color;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    padding: 30px 70px;
+
+    &__images {
+      display: grid; 
+      grid-template-columns: 270px 270px;
+      grid-template-rows: 270px;
+      gap: 30px;
+      grid-template-areas: 
+        "first third"
+        "second third";
+
+      &-first {
+        width: 270px;
+        height: 270px;
+      }
+
+      &-second {
+        width: 270px;
+        height: 350px;
+        padding-top: 30px;
+      }
+
+      &-third {
+        width: 270px;
+        height: 140px;
+      }
+    }
+
+    &-first { grid-area: first; }
+    &-second { grid-area: second; }
+    &-third { grid-area: third; }
+}

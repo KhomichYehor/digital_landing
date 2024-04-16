@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -316,6 +317,10 @@ template {
   font-family: "Font1";
   src: url(../../fonts/TT\ Hoves\ Pro\ Trial\ Light.ttf) format("ttf");
 }
+@font-face {
+  font-family: "Font2";
+  src: url(../../fonts/SFPRODISPLAYMEDIUM.OTF) format("OTF");
+}
 .header {
   box-sizing: border-box;
   padding: 30px 130px;
@@ -601,6 +606,11 @@ template {
   padding: 5px 10px;
   gap: 20px;
   border: 1px solid #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 2px;
   transition: all 0.5s;
 }
 .slider__images .slider__item__btn:hover {
@@ -619,4 +629,309 @@ template {
   max-width: calc(100% - 20px);
   box-sizing: border-box;
   border-radius: 8px;
+}
+
+.about__block {
+  font-family: "Font1", sans-serif;
+  padding-inline: 130px;
+  margin-bottom: 140px;
+}
+.about__block .about__text {
+  padding-left: 30px;
+}
+.about__block .about__text__title {
+  margin: 0;
+  font-weight: 300;
+  font-size: 64px;
+  color: #BDBDBD;
+  line-height: 64px;
+  padding-bottom: 20px;
+}
+.about__block .about__text__description {
+  margin: 0;
+  font-weight: 300;
+  font-size: 16px;
+  color: #000;
+  line-height: 25px;
+  padding-bottom: 20px;
+}
+.about__block .about__text__btn {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 70px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  gap: 20px;
+  border: 1px solid #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 2px;
+  transition: all 0.5s;
+}
+.about__block .about__text__btn:hover {
+  border: 1px solid #333333;
+}
+
+.about {
+  background: #FBFBFB;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  padding: 30px 70px;
+}
+.about__images {
+  display: grid;
+  grid-template-columns: 270px 270px;
+  grid-template-rows: 270px;
+  gap: 30px;
+  grid-template-areas: "first third" "second third";
+}
+.about__images-first {
+  width: 270px;
+  height: 270px;
+}
+.about__images-second {
+  width: 270px;
+  height: 350px;
+  padding-top: 30px;
+}
+.about__images-third {
+  width: 270px;
+  height: 140px;
+}
+.about-first {
+  grid-area: first;
+}
+.about-second {
+  grid-area: second;
+}
+.about-third {
+  grid-area: third;
+}
+
+.tasks__block {
+  font-family: "Font1", sans-serif;
+  padding-inline: 130px;
+  margin-bottom: 140px;
+}
+.tasks__block__title {
+  margin: 0;
+  font-weight: 300;
+  font-size: 64px;
+  line-height: 64px;
+  color: #BDBDBD;
+  margin-bottom: 60px;
+}
+.tasks__block .tasks__items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px 30px;
+}
+.tasks__block .tasks__items .tasks__item {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.tasks__block .tasks__items .tasks__item__count {
+  font-family: "Font2", sans-serif;
+  font-size: 200px;
+  font-weight: 900;
+  color: #F2F2F2;
+}
+.tasks__block .tasks__items .tasks__item__description {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 36px;
+  color: #333333;
+}
+
+.projects__block {
+  font-family: "Font1", sans-serif;
+  margin-inline: 130px;
+  margin-bottom: 240px;
+  display: block;
+  position: relative;
+}
+.projects__block__title {
+  margin: 0;
+  font-weight: 300;
+  font-size: 64px;
+  line-height: 64px;
+  color: #BDBDBD;
+  margin-bottom: 60px;
+}
+.projects__block .project__images {
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.6fr 1.4fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px 30px;
+  grid-template-areas: "first first second second" "third fourth fourth fifth";
+}
+.projects__block .project__images__item__container {
+  position: relative;
+}
+.projects__block .project__images .project__images__item-second {
+  grid-area: second;
+}
+.projects__block .project__images .project__images__item-first {
+  grid-area: first;
+}
+.projects__block .project__images .project__images__item-third {
+  grid-area: third;
+}
+.projects__block .project__images .project__images__item-fourth {
+  grid-area: fourth;
+}
+.projects__block .project__images .project__images__item-fifth {
+  grid-area: fifth;
+}
+.projects__block .project__images__item--l {
+  display: block;
+  width: 571px;
+  height: 255px;
+}
+.projects__block .project__images__item--m {
+  display: block;
+  width: 470px;
+  height: 255px;
+}
+.projects__block .project__images__item--s {
+  display: block;
+  width: 377px;
+  height: 255px;
+}
+.projects__block .project__images__item--xs {
+  display: block;
+  width: 270px;
+  height: 255px;
+}
+.projects__block .project__images__item__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.projects__block .project__images .image__overlay {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Сірий прозорий фон */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.5s;
+}
+.projects__block .project__images .image__overlay__title {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  text-transform: uppercase;
+}
+.projects__block .project__images .image__overlay .overlay__title--l,
+.projects__block .project__images .image__overlay .overlay__title--m,
+.projects__block .project__images .image__overlay .overlay__title--s,
+.projects__block .project__images .image__overlay .overlay__title--xs {
+  font-weight: 700;
+}
+.projects__block .project__images .image__overlay .overlay__title--l {
+  padding-left: 20px;
+  margin: 0 0 20px 0;
+  font-size: 64px;
+  line-height: 64px;
+}
+.projects__block .project__images .image__overlay .overlay__title--m,
+.projects__block .project__images .image__overlay .overlay__title--s {
+  padding-left: 15px;
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  line-height: 48px;
+}
+.projects__block .project__images .image__overlay .overlay__title--xs {
+  padding-left: 15px;
+  margin: 0 0 10px 0;
+  font-size: 32px;
+  line-height: 32px;
+}
+.projects__block .project__images .image__overlay__button {
+  border: 1px solid #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.projects__block .project__images .image__overlay .overlay__button--l,
+.projects__block .project__images .image__overlay .overlay__button--m,
+.projects__block .project__images .image__overlay .overlay__button--s,
+.projects__block .project__images .image__overlay .overlay__button--xs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 15px;
+  color: #fff;
+  width: 170px;
+  height: 30px;
+  background: none;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 3px;
+  transition: all 0.5s;
+}
+.projects__block .project__images .image__overlay .overlay__button--l:hover,
+.projects__block .project__images .image__overlay .overlay__button--m:hover,
+.projects__block .project__images .image__overlay .overlay__button--s:hover,
+.projects__block .project__images .image__overlay .overlay__button--xs:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+.projects__block .project__images .image__overlay .overlay__button--l {
+  margin-left: 24px;
+}
+.projects__block .project__images .image__overlay .overlay__button--m,
+.projects__block .project__images .image__overlay .overlay__button--s {
+  margin-left: 18px;
+}
+.projects__block .project__images .image__overlay .overlay__button--xs {
+  margin-left: 16px;
+}
+.projects__block .project__images__item__container:hover .image__overlay {
+  opacity: 1;
+}
+.projects__block__button {
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 24px 40px;
+  color: #fff;
+  width: 220px;
+  height: 30px;
+  background: #333333;
+  text-align: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 3px;
+  border: 1px solid #fff;
+  transition: all 0.5s;
+}
+.projects__block__button:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
 }/*# sourceMappingURL=main.css.map */

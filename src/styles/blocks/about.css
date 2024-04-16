@@ -1,0 +1,7 @@
+.about__block {
+  font-family: "Font1", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding-inline: 130px;
+  align-items: center;
+}/*# sourceMappingURL=about.css.map */
