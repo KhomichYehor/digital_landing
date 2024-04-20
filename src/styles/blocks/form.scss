@@ -3,6 +3,18 @@
   margin-inline: 130px;
   margin-bottom: 120px;
 
+  @include respond-to(m) {
+    margin: 20px 50px 50px 50px;
+  }
+
+  @include respond-to(s) {
+    margin: 10px 20px 40px 20px;
+  }
+
+  @include respond-to(xs) {
+    margin: 20px 24px 30px 20px;
+  }
+
   &__title {
     margin: 0;
     font-weight: 300;
@@ -10,6 +22,22 @@
     line-height: 64px;
     color: $grey-text;
     margin-bottom: 30px;
+
+    @include respond-to(m) {
+      font-size: 30px;
+      line-height: 30px;
+      margin-bottom: 30px;
+    }
+
+    @include respond-to(s) {
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    @include respond-to(xs) {
+      line-height: 14px;
+      font-size: 14px;
+    }
   }
 
   &__content {
@@ -20,6 +48,11 @@
       flex-direction: column;
       gap: 10px;
       padding-right: 30px;
+
+      @include respond-to(m) {
+        width: 100%;
+        padding-right: 0;
+      }
 
       .form-block__input {
         padding: 14px 21px;
@@ -49,6 +82,14 @@
         font-weight: 400;
         font-size: 14px;
         color: $grey-color;
+
+        @include respond-to(m) {
+          font-size: 12px;
+        }
+  
+        @include respond-to(s) {
+          font-size: 8px;
+        }
 
         &-star {
             color: $red-color;
@@ -80,6 +121,10 @@
     .form-block__image {
         width: 749px;
         height: 353px;
+
+        @include respond-to(m) {
+          display: none;
+        }
     }
   }
 }

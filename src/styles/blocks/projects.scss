@@ -359,6 +359,24 @@
     border: 1px solid $white-color;
     transition: all $hover-time;
 
+    @include respond-to(m) {
+      width: 150px;
+      height: 30px;
+      padding: 5px 10px;
+      gap: 20px;
+      font-size: 12px;
+    }
+
+    @include respond-to(s) {
+      gap: 10px;
+      font-size: 8px;
+    }
+
+    @include respond-to(xs) {
+      gap: 10px;
+      font-size: 8px;
+    }
+
     &:hover {
       cursor: pointer;
       background-color: $white-color;
