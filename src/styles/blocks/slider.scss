@@ -10,11 +10,13 @@
     padding: 20px 50px 0px 50px;
     grid-template-columns: 0.5fr 1.5fr;
     position: relative;
+    margin-bottom: 50px;
   }
 
   @include respond-to(s) {
     padding: 10px 20px 0px 20px;
     grid-template-columns: 0.3fr 1.7fr;
+    margin-bottom: 40px;
   }
 
   @include respond-to(xs) {
@@ -22,6 +24,7 @@
     padding-top: 20px;
     position: relative;
     grid-template-columns: 0.5fr 2fr;
+    margin-bottom: 30px;
   }
 
   &__count-wrapper {
@@ -199,11 +202,11 @@
     margin-left: 140px;
 
     @include respond-to(m) {
-      margin-left: 90px;
+      margin-left: 150px;
     }
 
     @include respond-to(s) {
-      margin-left: 70px;
+      margin-left: 100px;
     }
 
     @include respond-to(xs) {
@@ -230,7 +233,7 @@
         }
 
         @include respond-to(s) {
-          width: 350px;
+          width: 450px;
           height: 200px;
         }
 
@@ -309,21 +312,27 @@
         border-radius: 8px;
 
         @include respond-to(m) {
-          width: 42px;
-          height: 42px;
-          margin-right: 25px;
+          max-width: 330px;
+          font-size: 8px;
+          left: 5px;
+          bottom: 60px;
+          padding: 4px;
         }
 
         @include respond-to(s) {
-          width: 35px;
-          height: 35px;
-          margin-right: 20px;
+          max-width: 210px;
+          font-size: 6px;
+          left: 5px;
+          bottom: 40px;
+          padding: 4px;
         }
 
         @include respond-to(xs) {
-          width: 27px;
-          height: 27px;
-          margin-right: 15px;
+          max-width: 140px;
+          font-size: 5px;
+          left: 5px;
+          bottom: 34px;
+          padding: 4px;
         }
       }
     }
