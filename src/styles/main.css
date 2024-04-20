@@ -503,32 +503,28 @@ template {
   font-family: "Font1", sans-serif;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  padding-inline: 130px;
+  margin-inline: 130px;
   align-items: center;
   margin-bottom: 150px;
 }
 @media (max-width: 1000px) {
   .slider {
-    padding: 20px 50px 0px 50px;
+    margin: 20px 50px 50px 50px;
     grid-template-columns: 0.5fr 1.5fr;
     position: relative;
-    margin-bottom: 50px;
   }
 }
 @media (max-width: 768px) {
   .slider {
-    padding: 10px 20px 0px 20px;
+    margin: 10px 20px 40px 20px;
     grid-template-columns: 0.3fr 1.7fr;
-    margin-bottom: 40px;
   }
 }
 @media (max-width: 480px) {
   .slider {
-    padding-inline: 24px;
-    padding-top: 20px;
+    margin: 20px 24px 30px 24px;
     position: relative;
     grid-template-columns: 0.5fr 2fr;
-    margin-bottom: 30px;
   }
 }
 .slider__count-wrapper {
@@ -854,25 +850,22 @@ template {
 
 .about__block {
   font-family: "Font1", sans-serif;
-  padding-inline: 130px;
+  margin-inline: 130px;
   margin-bottom: 140px;
 }
 @media (max-width: 1000px) {
   .about__block {
-    padding: 20px 50px 0px 50px;
-    margin-bottom: 50px;
+    margin: 20px 50px 50px 50px;
   }
 }
 @media (max-width: 768px) {
   .about__block {
-    padding: 10px 20px 0px 20px;
-    margin-bottom: 40px;
+    margin: 10px 20px 40px 20px;
   }
 }
 @media (max-width: 480px) {
   .about__block {
-    padding: 20px 24px 0 20px;
-    margin-bottom: 30px;
+    margin: 20px 24px 30px 20px;
   }
 }
 .about__block .about__text {
@@ -1130,25 +1123,22 @@ template {
 
 .tasks__block {
   font-family: "Font1", sans-serif;
-  padding-inline: 130px;
+  margin-inline: 130px;
   margin-bottom: 140px;
 }
 @media (max-width: 1000px) {
   .tasks__block {
-    padding: 20px 50px 0px 50px;
-    margin-bottom: 50px;
+    margin: 20px 50px 50px 50px;
   }
 }
 @media (max-width: 768px) {
   .tasks__block {
-    padding: 10px 20px 0px 20px;
-    margin-bottom: 40px;
+    margin: 10px 20px 40px 20px;
   }
 }
 @media (max-width: 480px) {
   .tasks__block {
-    padding: 20px 24px 0 20px;
-    margin-bottom: 30px;
+    margin: 20px 24px 30px 20px;
   }
 }
 .tasks__block__title {
@@ -1258,6 +1248,21 @@ template {
   display: block;
   position: relative;
 }
+@media (max-width: 1000px) {
+  .projects__block {
+    margin: 20px 50px 150px 50px;
+  }
+}
+@media (max-width: 768px) {
+  .projects__block {
+    margin: 10px 20px 140px 20px;
+  }
+}
+@media (max-width: 480px) {
+  .projects__block {
+    margin: 20px 24px 130px 20px;
+  }
+}
 .projects__block__title {
   margin: 0;
   font-weight: 300;
@@ -1266,6 +1271,25 @@ template {
   color: #BDBDBD;
   margin-bottom: 60px;
 }
+@media (max-width: 1000px) {
+  .projects__block__title {
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .projects__block__title {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .projects__block__title {
+    line-height: 14px;
+    font-size: 14px;
+  }
+}
 .projects__block .project__images {
   margin-bottom: 30px;
   display: grid;
@@ -1273,6 +1297,28 @@ template {
   grid-template-rows: 1fr 1fr;
   gap: 30px 30px;
   grid-template-areas: "first first second second" "third fourth fourth fifth";
+}
+@media (max-width: 1000px) {
+  .projects__block .project__images {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px 20px;
+    grid-template-areas: "first first" "second second" "fourth third" "third fifth";
+  }
+}
+@media (max-width: 768px) {
+  .projects__block .project__images {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.8fr 0.8fr 0.8fr 0.5fr;
+    gap: 10px 10px;
+    grid-template-areas: "first first" "second second" "fourth fourth" "third fifth";
+  }
+}
+@media (max-width: 480px) {
+  .projects__block .project__images {
+    line-height: 14px;
+    font-size: 14px;
+  }
 }
 .projects__block .project__images__item__container {
   position: relative;
@@ -1297,20 +1343,92 @@ template {
   width: 571px;
   height: 255px;
 }
+@media (max-width: 1000px) {
+  .projects__block .project__images__item--l {
+    width: 100%;
+    height: 200px;
+  }
+}
+@media (max-width: 768px) {
+  .projects__block .project__images__item--l {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .projects__block .project__images__item--l {
+    line-height: 14px;
+    font-size: 14px;
+  }
+}
 .projects__block .project__images__item--m {
   display: block;
   width: 470px;
   height: 255px;
+}
+@media (max-width: 1000px) {
+  .projects__block .project__images__item--m {
+    width: 100%;
+    height: 200px;
+  }
+}
+@media (max-width: 768px) {
+  .projects__block .project__images__item--m {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .projects__block .project__images__item--m {
+    line-height: 14px;
+    font-size: 14px;
+  }
 }
 .projects__block .project__images__item--s {
   display: block;
   width: 377px;
   height: 255px;
 }
+@media (max-width: 1000px) {
+  .projects__block .project__images__item--s {
+    width: 100%;
+    height: 200px;
+  }
+}
+@media (max-width: 768px) {
+  .projects__block .project__images__item--s {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .projects__block .project__images__item--s {
+    line-height: 14px;
+    font-size: 14px;
+  }
+}
 .projects__block .project__images__item--xs {
   display: block;
   width: 270px;
   height: 255px;
+}
+@media (max-width: 1000px) {
+  .projects__block .project__images__item--xs {
+    width: 100%;
+    height: 200px;
+  }
+}
+@media (max-width: 768px) {
+  .projects__block .project__images__item--xs {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .projects__block .project__images__item--xs {
+    line-height: 14px;
+    font-size: 14px;
+  }
 }
 .projects__block .project__images__item__image {
   display: block;
@@ -1330,6 +1448,7 @@ template {
   justify-content: center;
   opacity: 0;
   cursor: pointer;
+  width: 100%;
   transition: opacity 0.5s;
 }
 .projects__block .project__images .image__overlay__title {
@@ -1350,6 +1469,25 @@ template {
   font-size: 64px;
   line-height: 64px;
 }
+@media (max-width: 1000px) {
+  .projects__block .project__images .image__overlay .overlay__title--l {
+    margin: 0 0 15px 0;
+    font-size: 48px;
+    line-height: 48px;
+  }
+}
+@media (max-width: 768px) {
+  .projects__block .project__images .image__overlay .overlay__title--l {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .projects__block .project__images .image__overlay .overlay__title--l {
+    line-height: 14px;
+    font-size: 14px;
+  }
+}
 .projects__block .project__images .image__overlay .overlay__title--m,
 .projects__block .project__images .image__overlay .overlay__title--s {
   padding-left: 15px;
@@ -1357,11 +1495,52 @@ template {
   font-size: 48px;
   line-height: 48px;
 }
+@media (max-width: 1000px) {
+  .projects__block .project__images .image__overlay .overlay__title--m,
+  .projects__block .project__images .image__overlay .overlay__title--s {
+    margin: 0 0 15px 0;
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+@media (max-width: 768px) {
+  .projects__block .project__images .image__overlay .overlay__title--m,
+  .projects__block .project__images .image__overlay .overlay__title--s {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .projects__block .project__images .image__overlay .overlay__title--m,
+  .projects__block .project__images .image__overlay .overlay__title--s {
+    line-height: 14px;
+    font-size: 14px;
+  }
+}
 .projects__block .project__images .image__overlay .overlay__title--xs {
   padding-left: 15px;
   margin: 0 0 10px 0;
   font-size: 32px;
   line-height: 32px;
+}
+@media (max-width: 1000px) {
+  .projects__block .project__images .image__overlay .overlay__title--xs {
+    margin: 0 0 15px 0;
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .projects__block .project__images .image__overlay .overlay__title--xs {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .projects__block .project__images .image__overlay .overlay__title--xs {
+    line-height: 14px;
+    font-size: 14px;
+  }
 }
 .projects__block .project__images .image__overlay__button {
   border: 1px solid #fff;
