@@ -7,9 +7,38 @@
     display: flex;
     gap: 170px;
 
+    @include respond-to(m) {
+      padding: 20px 30px;
+      gap: 70px;
+    }
+
+    @include respond-to(s) {
+      padding: 20px 10px;
+      gap: 60px;
+    }
+
+    @include respond-to(xs) {
+      padding: 20px 10px;
+      gap: 30px;
+    }
+
     &__logo {
-      width: 150px;
-      height: 100px;
+      img {
+        @include respond-to(m) {
+          width: 100px;
+          height: 50px;
+        }
+
+        @include respond-to(s) {
+          width: 80px;
+          height: 30px;
+        }
+
+        @include respond-to(xs) {
+          width: 30px;
+          height: 30px;
+        }
+      }
     }
 
     &__info {
@@ -21,6 +50,21 @@
         font-weight: 700px;
         font-size: 16px;
         line-height: 20px;
+
+        @include respond-to(m) {
+          font-size: 12px;
+          line-height: 12px;
+        }
+
+        @include respond-to(s) {
+          font-size: 10px;
+          line-height: 10px;
+        }
+
+        @include respond-to(xs) {
+          font-size: 6px;
+          line-height: 6px;
+        }
       }
 
       &__wrapper {
@@ -29,6 +73,18 @@
         justify-content: center;
         gap: 16px;
 
+        @include respond-to(m) {
+          gap: 14px;
+        }
+
+        @include respond-to(s) {
+          gap: 12px;
+        }
+
+        @include respond-to(xs) {
+          gap: 10px;
+        }
+
         .footer__info__item {
           color: $white-color;
           text-decoration: none;
@@ -36,6 +92,21 @@
           font-size: 14px;
           line-height: 24px;
           transition: all $hover-time;
+
+          @include respond-to(m) {
+            font-size: 10px;
+            line-height: 10px;
+          }
+
+          @include respond-to(s) {
+            font-size: 8px;
+            line-height: 8px;
+          }
+
+          @include respond-to(xs) {
+            font-size: 4px;
+            line-height: 4px;
+          }
 
           &:hover {
             transform: scale(1.1);
@@ -54,6 +125,21 @@
         font-weight: 700px;
         font-size: 16px;
         line-height: 20px;
+
+        @include respond-to(m) {
+          font-size: 12px;
+          line-height: 12px;
+        }
+
+        @include respond-to(s) {
+          font-size: 10px;
+          line-height: 10px;
+        }
+
+        @include respond-to(xs) {
+          font-size: 6px;
+          line-height: 6px;
+        }
       }
 
       &__wrapper {
@@ -61,6 +147,18 @@
         flex-direction: column;
         justify-content: center;
         gap: 16px;
+
+        @include respond-to(m) {
+          gap: 14px;
+        }
+
+        @include respond-to(s) {
+          gap: 12px;
+        }
+
+        @include respond-to(xs) {
+          gap: 10px;
+        }
 
         .contacts__item {
           display: flex;
@@ -71,6 +169,10 @@
           text-decoration: none;
           transition: all $hover-time;
 
+          @include respond-to(m) {
+            gap: 5px;
+          }
+
           &:hover {
             transform: scale(1.1);
             filter: drop-shadow(0 0 2px $white-color);
@@ -79,12 +181,42 @@
           &__logo {
             width: 16px;
             height: 16px;
+
+            @include respond-to(m) {
+              width: 12px;
+              height: 12px;
+            }
+
+            @include respond-to(s) {
+              width: 10px;
+              height: 10px;
+            }
+
+            @include respond-to(xs) {
+              width: 6px;
+              height: 6px;
+            }
           }
 
           &__description {
             font-weight: 500;
             font-size: 14px;
             line-height: 24px;
+
+            @include respond-to(m) {
+              font-size: 10px;
+              line-height: 10px;
+            }
+
+            @include respond-to(s) {
+              font-size: 8px;
+              line-height: 8px;
+            }
+
+            @include respond-to(xs) {
+              font-size: 6px;
+              line-height: 9px;
+            }
           }
         }
       }
@@ -99,6 +231,21 @@
         font-weight: 700px;
         font-size: 16px;
         line-height: 20px;
+
+        @include respond-to(m) {
+          font-size: 12px;
+          line-height: 12px;
+        }
+
+        @include respond-to(s) {
+          font-size: 10px;
+          line-height: 10px;
+        }
+
+        @include respond-to(xs) {
+          font-size: 6px;
+          line-height: 9px;
+        }
       }
 
       &__wrapper {
@@ -117,6 +264,21 @@
           &__image {
             width: 22px;
             height: 22px;
+
+            @include respond-to(m) {
+              width: 12px;
+              height: 12px;
+            }
+
+            @include respond-to(s) {
+              width: 10px;
+              height: 10px;
+            }
+
+            @include respond-to(xs) {
+              width: 8px;
+              height: 8px;
+            }
           }
         }
       }
@@ -125,6 +287,7 @@
 
   &__line {
     opacity: 10%;
+    margin: 0;
   }
 
   &__description {
@@ -136,5 +299,23 @@
     font-size: 12px;
     line-height: 22px;
     text-align: center;
+
+    @include respond-to(m) {
+      padding-block: 16px;
+      font-size: 10px;
+      line-height: 10px;
+    }
+
+    @include respond-to(s) {
+      padding-block: 12px;
+      font-size: 8px;
+      line-height: 8px;
+    }
+
+    @include respond-to(xs) {
+      padding-block: 8px;
+      font-size: 4px;
+      line-height: 4px;
+    }
   }
 }

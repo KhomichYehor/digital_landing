@@ -1,27 +1,39 @@
 // ---------- Menu ----------
 
+// Отримання стану меню з localStorage або встановлення за замовчуванням на false
+let isMenuOpen = localStorage.getItem('isMenuOpen') === 'true';
+
 function checkWindowSize() {
   if (window.innerWidth > 480) {
+    // На великих екранах завжди показувати меню
     document.getElementById('navbar').style.display = 'flex';
     document.body.style.overflow = 'auto';
   } else {
-    document.getElementById('navbar').style.display = 'none';
-    document.body.style.overflow = 'auto';
+    // На малих екранах відображення меню залежить від isMenuOpen
+    document.getElementById('navbar').style.display = isMenuOpen ? 'flex' : 'none';
+    document.body.style.overflow = isMenuOpen ? 'hidden' : 'auto';
   }
 }
 
-document.addEventListener('DOMContentLoaded', checkWindowSize);
+document.addEventListener('DOMContentLoaded', function() {
+  checkWindowSize(); // Перевірка при завантаженні
+  document.getElementById('menu-toggle').addEventListener('click', function () {
+    document.getElementById('navbar').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    isMenuOpen = true;
+    localStorage.setItem('isMenuOpen', 'true'); // Збереження стану в localStorage
+  });
 
-window.addEventListener('resize', checkWindowSize);
-
-document.getElementById('menu-toggle').addEventListener('click', function () {
-  document.getElementById('navbar').style.display = 'flex';
-  document.body.style.overflow = 'hidden';
+  document.getElementById('close-menu').addEventListener('click', function () {
+    document.getElementById('navbar').style.display = 'none';
+    document.body.style.overflow = 'auto';
+    isMenuOpen = false;
+    localStorage.setItem('isMenuOpen', 'false'); // Збереження стану в localStorage
+  });
 });
 
-document.getElementById('close-menu').addEventListener('click', function () {
-  document.getElementById('navbar').style.display = 'none';
-  document.body.style.overflow = 'auto';
+window.addEventListener('resize', function() {
+  checkWindowSize(); // Перевірка при зміні розміру вікна
 });
 
 // ---------- Slider ----------
