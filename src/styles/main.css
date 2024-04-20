@@ -1133,18 +1133,71 @@ template {
   padding-inline: 130px;
   margin-bottom: 140px;
 }
+@media (max-width: 1000px) {
+  .tasks__block {
+    padding: 20px 50px 0px 50px;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .tasks__block {
+    padding: 10px 20px 0px 20px;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 480px) {
+  .tasks__block {
+    padding: 20px 24px 0 20px;
+    margin-bottom: 30px;
+  }
+}
 .tasks__block__title {
-  margin: 0;
+  margin: 0 0 60px 0;
   font-weight: 300;
   font-size: 64px;
   line-height: 64px;
   color: #BDBDBD;
-  margin-bottom: 60px;
+}
+@media (max-width: 1000px) {
+  .tasks__block__title {
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .tasks__block__title {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .tasks__block__title {
+    line-height: 14px;
+    font-size: 14px;
+  }
 }
 .tasks__block .tasks__items {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0px 30px;
+}
+@media (max-width: 1000px) {
+  .tasks__block .tasks__items {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px 0;
+  }
+}
+@media (max-width: 768px) {
+  .tasks__block .tasks__items {
+    gap: 20px 0;
+  }
+}
+@media (max-width: 480px) {
+  .tasks__block .tasks__items {
+    gap: 15px 0;
+  }
 }
 .tasks__block .tasks__items .tasks__item {
   display: flex;
@@ -1158,11 +1211,44 @@ template {
   font-weight: 900;
   color: #F2F2F2;
 }
+@media (max-width: 1000px) {
+  .tasks__block .tasks__items .tasks__item__count {
+    font-size: 170px;
+  }
+}
+@media (max-width: 768px) {
+  .tasks__block .tasks__items .tasks__item__count {
+    font-size: 125px;
+  }
+}
+@media (max-width: 480px) {
+  .tasks__block .tasks__items .tasks__item__count {
+    font-size: 75px;
+  }
+}
 .tasks__block .tasks__items .tasks__item__description {
   font-size: 22px;
   font-weight: 400;
   line-height: 36px;
   color: #333333;
+}
+@media (max-width: 1000px) {
+  .tasks__block .tasks__items .tasks__item__description {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 768px) {
+  .tasks__block .tasks__items .tasks__item__description {
+    font-size: 12px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .tasks__block .tasks__items .tasks__item__description {
+    font-size: 8px;
+    line-height: 15px;
+  }
 }
 
 .projects__block {

@@ -3,19 +3,63 @@
   padding-inline: 130px;
   margin-bottom: 140px;
 
+  @include respond-to(m) {
+    padding: 20px 50px 0px 50px;
+    margin-bottom: 50px;
+  }
+
+  @include respond-to(s) {
+    padding: 10px 20px 0px 20px;
+    margin-bottom: 40px;
+  }
+
+  @include respond-to(xs) {
+    padding: 20px 24px 0 20px;
+    margin-bottom: 30px;
+  }
+
   &__title {
-    margin: 0;
+    margin: 0 0 60px 0;
     font-weight: 300;
     font-size: 64px;
     line-height: 64px;
     color: $grey-text;
-    margin-bottom: 60px;
+
+    @include respond-to(m) {
+      font-size: 30px;
+      line-height: 30px;
+      margin-bottom: 30px;
+    }
+
+    @include respond-to(s) {
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    @include respond-to(xs) {
+      line-height: 14px;
+      font-size: 14px;
+    }
   }
 
   .tasks__items {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0px 30px;
+
+    @include respond-to(m) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 30px 0;
+    }
+
+    @include respond-to(s) {
+      gap: 20px 0;
+    }
+
+    @include respond-to(xs) {
+      gap: 15px 0;
+    }
 
     .tasks__item {
         display: flex;
@@ -28,6 +72,18 @@
             font-size: 200px;
             font-weight: 900;
             color: $btn-border-color;
+
+            @include respond-to(m) {
+              font-size: 170px;
+            }
+        
+            @include respond-to(s) {
+              font-size: 125px;
+            }
+        
+            @include respond-to(xs) {
+              font-size: 75px;
+            }
         }
 
         &__description {
@@ -35,6 +91,21 @@
             font-weight: 400;
             line-height: 36px;
             color: $grey-color;
+
+            @include respond-to(m) {
+              font-size: 18px;
+              line-height: 28px;
+            }
+        
+            @include respond-to(s) {
+              font-size: 12px;
+              line-height: 24px;
+            }
+        
+            @include respond-to(xs) {
+              font-size: 8px;
+              line-height: 15px;
+            }
         }
     }
   }
